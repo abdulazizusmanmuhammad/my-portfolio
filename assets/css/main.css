@@ -4095,6 +4095,69 @@ body.az-site {
   color: #ffffff;
 }
 
+.floating-contact {
+  position: fixed;
+  right: 22px;
+  bottom: 76px;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.floating-contact-link {
+  min-height: 46px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 0 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  box-shadow: 0 5px 18px rgba(16, 26, 43, 0.22);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.floating-contact-link:hover {
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(16, 26, 43, 0.26);
+}
+
+.floating-contact-link i {
+  font-size: 18px;
+}
+
+.floating-whatsapp {
+  background: #168b55;
+}
+
+.floating-email {
+  background: #1874e8;
+}
+
+body.mobile-nav-active .floating-contact {
+  display: none;
+}
+
+@media (max-width: 575.98px) {
+  .floating-contact {
+    right: 14px;
+    bottom: 72px;
+    gap: 8px;
+  }
+
+  .floating-contact-link {
+    min-height: 44px;
+    padding: 0 13px;
+    font-size: 12px;
+  }
+}
+
 @media (max-width: 1199.98px) {
   .az-header .navmenu > ul {
     display: none;
