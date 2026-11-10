@@ -3799,6 +3799,93 @@ body.az-site {
   color: #26354a;
 }
 
+.featured-project {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(240px, 325px);
+  align-items: center;
+  gap: clamp(28px, 6vw, 72px);
+  margin-top: 76px;
+  padding: clamp(24px, 5vw, 48px);
+  border: 1px solid #e6ecf3;
+  border-radius: 12px;
+  background: #f5f7fb;
+}
+
+.featured-project-copy {
+  max-width: 470px;
+}
+
+.featured-project-copy h2 {
+  margin: 0 0 12px;
+  color: #101a2b;
+  font: 800 clamp(25px, 3vw, 36px)/1.2 var(--heading-font);
+  letter-spacing: -0.05em;
+}
+
+.featured-project-copy > p:not(.eyebrow) {
+  margin: 0 0 20px;
+  color: #657386;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.featured-project-preview {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #101a2b;
+}
+
+.featured-project-preview::after {
+  position: absolute;
+  inset: 45% 0 0;
+  background: linear-gradient(transparent, rgba(16, 26, 43, 0.8));
+  content: "";
+}
+
+.featured-project-preview img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 200ms ease;
+}
+
+.featured-project-preview:hover img {
+  transform: scale(1.04);
+}
+
+.featured-project-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  width: 62px;
+  height: 62px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  border-radius: 50%;
+  background: rgba(16, 26, 43, 0.68);
+  color: #ffffff;
+  font-size: 32px;
+  transform: translate(-50%, -50%);
+}
+
+.featured-project-watch {
+  position: absolute;
+  right: 12px;
+  bottom: 18px;
+  left: 12px;
+  z-index: 1;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+}
+
 .process-list {
   max-width: 900px;
 }
@@ -4200,6 +4287,15 @@ body.az-site {
 @media (max-width: 767.98px) {
   .project-gallery {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .featured-project {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-project-preview {
+    width: min(100%, 325px);
+    justify-self: center;
   }
 
   .footer-main {
