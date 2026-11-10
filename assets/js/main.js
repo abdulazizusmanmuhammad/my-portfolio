@@ -6,6 +6,7 @@
   const menuToggle = document.querySelector(".mobile-nav-toggle");
   const navMenu = document.querySelector("#navmenu");
   const scrollTop = document.querySelector("#scroll-top");
+  const enquiryForm = document.querySelector("#project-enquiry-form");
 
   function updateScrollState() {
     if (header && window.scrollY > 24) {
@@ -17,6 +18,41 @@
     if (scrollTop) {
       scrollTop.classList.toggle("active", window.scrollY > 320);
     }
+  }
+
+  if (enquiryForm) {
+    enquiryForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      if (!enquiryForm.reportValidity()) {
+        return;
+      }
+
+      const formData = new FormData(enquiryForm);
+      const name = String(formData.get("name")).trim();
+      const email = String(formData.get("email")).trim();
+      const service = String(formData.get("service")).trim();
+      const message = String(formData.get("message")).trim();
+      const subject = `Project enquiry: ${service}`;
+      const bodyText = [
+        `Name: ${name}`,
+        `Email: ${email}`,
+        `Service: ${service}`,
+        "",
+        message
+      ].join("\n");
+      const mailto = `mailto:abdulazizusmanaum01@gmail.com?${new URLSearchParams({
+        subject,
+        body: bodyText
+      })}`;
+      const status = enquiryForm.querySelector(".form-status");
+
+      if (status) {
+        status.textContent = "Your email app should open with this message ready. Review it, then press Send to deliver your enquiry.";
+      }
+
+      window.location.href = mailto;
+    });
   }
 
   function setMenuOpen(isOpen) {
@@ -34,7 +70,14 @@
 
   if (menuToggle) {
     menuToggle.addEventListener("click", function () {
-      setMenuOpen(menuToggle.getAttribute("aria-expanded") !== "true");
+      const isOpening = menuToggle.getAttribute("aria-expanded") !== "true";
+      setMenuOpen(isOpening);
+      if (isOpening && navMenu) {
+        const firstLink = navMenu.querySelector("ul a");
+        if (firstLink) {
+          firstLink.focus({ preventScroll: true });
+        }
+      }
     });
   }
 
@@ -48,12 +91,24 @@
     });
   }
 
+  document.addEventListener("click", function (event) {
+    if (body.classList.contains("mobile-nav-active") && navMenu && !navMenu.contains(event.target)) {
+      setMenuOpen(false);
+    }
+  });
+
   document.addEventListener("keydown", function (event) {
     if (event.key === "Escape" && body.classList.contains("mobile-nav-active")) {
       setMenuOpen(false);
       if (menuToggle) {
         menuToggle.focus();
       }
+    }
+  });
+
+  window.addEventListener("resize", function () {
+    if (window.innerWidth > 1199.98 && body.classList.contains("mobile-nav-active")) {
+      setMenuOpen(false);
     }
   });
 

@@ -1,4 +1,4 @@
-AZ Creation Hub portfolio
+AZ Portfolio portfolio
 
 This is the static portfolio website for Abdulaziz Usman, a Nigeria-based web developer, web designer, and video editor. The site uses Bootstrap and the FolioOne design foundation and is structured to work on GitHub Pages.
 

@@ -2875,6 +2875,34 @@ body.az-site {
   overflow-x: hidden;
 }
 
+.skip-link {
+  position: fixed;
+  top: -60px;
+  left: 12px;
+  z-index: 10000;
+  padding: 10px 14px;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #101a2b;
+  font-size: 14px;
+  font-weight: 700;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.18);
+  transition: top 150ms ease;
+}
+
+.skip-link:focus {
+  top: 12px;
+}
+
+.az-site :focus-visible {
+  outline: 3px solid #78adff;
+  outline-offset: 4px;
+}
+
+.az-site :focus:not(:focus-visible) {
+  outline: none;
+}
+
 .az-site h1,
 .az-site h2,
 .az-site h3,
@@ -3019,7 +3047,7 @@ body.az-site {
 .az-hero {
   position: relative;
   overflow: hidden;
-  padding: 74px 0 25px;
+  padding: 38px 0 16px;
   background: #101a2b;
   color: #ffffff;
 }
@@ -3029,7 +3057,7 @@ body.az-site {
   grid-template-columns: minmax(0, 1fr) minmax(340px, 0.88fr);
   align-items: center;
   gap: clamp(45px, 8vw, 120px);
-  min-height: 510px;
+  min-height: 440px;
 }
 
 .hero-copy {
@@ -3062,10 +3090,10 @@ body.az-site {
 }
 
 .az-hero h1 {
-  max-width: 690px;
+  max-width: 700px;
   margin: 0;
   color: #ffffff;
-  font-size: clamp(3.1rem, 6.5vw, 5.85rem);
+  font-size: clamp(3rem, 5vw, 4.5rem);
   font-weight: 800;
   line-height: 1.04;
   letter-spacing: -0.075em;
@@ -3156,7 +3184,7 @@ body.az-site {
   max-width: 500px;
   display: flex;
   justify-content: space-between;
-  margin-top: 55px;
+  margin-top: 28px;
   padding-top: 14px;
   border-top: 1px solid rgba(255, 255, 255, 0.16);
   color: #8492a5;
@@ -3354,6 +3382,7 @@ body.az-site {
 
 .az-section {
   padding: clamp(68px, 9vw, 112px) 0;
+  scroll-margin-top: 88px;
 }
 
 .section-muted {
@@ -3749,6 +3778,13 @@ body.az-site {
   background: #f5f7fb;
 }
 
+.contact-form-panel > p:not(.eyebrow) {
+  max-width: 520px;
+  margin-bottom: 24px;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
 .contact-panel h2 {
   margin: 0 0 17px;
   font-size: clamp(2rem, 4vw, 3rem);
@@ -3761,6 +3797,73 @@ body.az-site {
   margin-bottom: 24px;
   font-size: 14px;
   line-height: 1.85;
+}
+
+.project-enquiry-form {
+  display: grid;
+  gap: 16px;
+  margin-top: 25px;
+}
+
+.form-field {
+  display: grid;
+  gap: 7px;
+}
+
+.form-field label {
+  color: #26354a;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  min-height: 47px;
+  padding: 11px 13px;
+  border: 1px solid #dce4ee;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #26354a;
+  font: 400 14px/1.5 var(--default-font);
+}
+
+.form-field textarea {
+  min-height: 125px;
+  resize: vertical;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: #8995a5;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  border-color: #1874e8;
+  outline: 3px solid rgba(24, 116, 232, 0.14);
+}
+
+.enquiry-submit {
+  justify-self: start;
+  cursor: pointer;
+  font-family: var(--default-font);
+}
+
+.form-help,
+.form-status {
+  margin: -7px 0 0;
+  color: #697688;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.form-status {
+  margin: 0;
+  color: #145a37;
+  font-weight: 600;
 }
 
 .contact-details {
@@ -3999,6 +4102,8 @@ body.az-site {
     top: calc(100% + 10px);
     right: 16px;
     left: 16px;
+    bottom: auto;
+    max-height: calc(100vh - 100px);
     z-index: 9998;
     flex-direction: column;
     align-items: stretch;
@@ -4008,6 +4113,15 @@ body.az-site {
     border-radius: 9px;
     background: #ffffff;
     box-shadow: 0 18px 45px rgba(16, 26, 43, 0.14);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  @supports (height: 100dvh) {
+    .az-header .navmenu > ul {
+      max-height: calc(100dvh - 100px);
+    }
   }
 
   .az-header .navmenu > ul > li > a {
@@ -4023,6 +4137,20 @@ body.az-site {
 
   .mobile-nav-active .az-header .navmenu > ul {
     display: flex;
+  }
+
+  .mobile-nav-active .az-header .navmenu {
+    position: static;
+    overflow: visible;
+    inset: auto;
+    background: transparent;
+  }
+
+  .mobile-nav-active .az-header .mobile-nav-toggle {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin: 0;
   }
 
   .az-header .mobile-nav-toggle {
@@ -4098,7 +4226,7 @@ body.az-site {
   }
 
   .az-hero {
-    padding-top: 40px;
+    padding-top: 22px;
   }
 
   .hero-grid {
@@ -4108,7 +4236,7 @@ body.az-site {
   }
 
   .hero-copy {
-    padding: 26px 0 12px;
+    padding: 22px 0 10px;
   }
 
   .az-hero h1 {
@@ -4120,7 +4248,7 @@ body.az-site {
   }
 
   .hero-caption {
-    margin-top: 32px;
+    margin-top: 22px;
   }
 
   .hero-art {
@@ -4288,6 +4416,10 @@ body.az-site {
   }
 }
 
+body.mobile-nav-active {
+  overflow: hidden;
+}
+
 @media (max-width: 420px) {
   .service-grid,
   .focus-grid {
@@ -4329,6 +4461,12 @@ body.az-site {
 
   .work-pillars > div:last-child {
     border-bottom: 0;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero-art {
+    display: none;
   }
 }
 

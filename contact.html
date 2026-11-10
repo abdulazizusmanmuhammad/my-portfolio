@@ -2,32 +2,66 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Get in touch with Abdulaziz Usman at AZ Creation Hub about web development, web design, graphic design, or video editing. Based in Nigeria.">
-  <meta name="theme-color" content="#101a2b"><meta property="og:type" content="website"><meta property="og:locale" content="en_NG"><meta property="og:site_name" content="AZ Creation Hub">
-  <meta property="og:title" content="Contact Abdulaziz Usman | AZ Creation Hub"><meta property="og:description" content="Have a web, design, or video project in mind? Start a conversation with Abdulaziz Usman.">
-  <title>Contact Abdulaziz Usman | AZ Creation Hub</title>
+  <meta name="description" content="Get in touch with Abdulaziz Usman at AZ Portfolio about web development, web design, graphic design, or video editing. Based in Nigeria.">
+  <meta name="theme-color" content="#101a2b"><meta property="og:type" content="website"><meta property="og:locale" content="en_NG"><meta property="og:site_name" content="AZ Portfolio">
+  <meta property="og:title" content="Contact Abdulaziz Usman | AZ Portfolio"><meta property="og:description" content="Have a web, design, or video project in mind? Start a conversation with Abdulaziz Usman.">
+  <title>Contact Abdulaziz Usman | AZ Portfolio</title>
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"><link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"><link href="assets/vendor/aos/aos.css" rel="stylesheet"><link href="assets/css/main.css" rel="stylesheet">
 </head>
 <body class="az-site">
+  <a class="skip-link" href="#main">Skip to content</a>
   <header id="header" class="header az-header sticky-top"><div class="container az-header-inner">
-    <a class="brand-link" href="index.html" aria-label="AZ Creation Hub home"><span class="brand-mark" aria-hidden="true">AZ</span><span class="brand-copy"><strong>AZ Creation Hub</strong><small>WEB · DESIGN · VIDEO</small></span></a>
-    <nav id="navmenu" class="navmenu" aria-label="Main navigation"><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="portfolio.html">Work</a></li><li><a href="resume.html">Approach</a></li><li><a class="active" href="contact.html" aria-current="page">Contact</a></li></ul><button class="mobile-nav-toggle d-xl-none" type="button" aria-label="Open navigation" aria-expanded="false"><i class="bi bi-list" aria-hidden="true"></i></button></nav>
+    <a class="brand-link" href="index.html" aria-label="AZ Portfolio home"><span class="brand-mark" aria-hidden="true">AZ</span><span class="brand-copy"><strong>AZ Portfolio</strong><small>WEB · DESIGN · VIDEO</small></span></a>
+    <nav id="navmenu" class="navmenu" aria-label="Main navigation"><ul id="primary-navigation"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="portfolio.html">Work</a></li><li><a href="resume.html">Approach</a></li><li><a class="active" href="contact.html" aria-current="page">Contact</a></li></ul><button class="mobile-nav-toggle d-xl-none" type="button" aria-label="Open navigation" aria-controls="primary-navigation" aria-expanded="false"><i class="bi bi-list" aria-hidden="true"></i></button></nav>
     <a class="header-cta" href="contact.html">Let’s talk <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
   </div></header>
-  <main>
-    <section class="page-hero"><div class="container page-hero-inner" data-aos="fade-up"><p class="eyebrow">Contact · AZ Creation Hub</p><h1>Let’s talk about<br><span>what you’re making.</span></h1><p>Share a little about your idea, what you need, and where you’d like to take it. I’m based in Nigeria and happy to discuss your project.</p></div></section>
+  <main id="main">
+    <section class="page-hero"><div class="container page-hero-inner" data-aos="fade-up"><p class="eyebrow">Contact · AZ Portfolio</p><h1>Let’s talk about<br><span>what you’re making.</span></h1><p>Share a little about your idea, what you need, and where you’d like to take it. I’m based in Nigeria and happy to discuss your project.</p></div></section>
     <section class="az-section"><div class="container contact-layout">
-      <div class="contact-panel" data-aos="fade-up"><p class="eyebrow">Start a conversation</p><h2>One message is<br>all it takes.</h2><p>For project enquiries, send me a message on X. Include the kind of work you’re looking for and any useful timing or background, and I’ll get back to you there.</p><a class="btn-az btn-az-primary" href="https://x.com/mr_az33" target="_blank" rel="noopener noreferrer">Message Abdulaziz on X <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a></div>
+      <div class="contact-panel contact-form-panel" data-aos="fade-up">
+        <p class="eyebrow">Project enquiry</p>
+        <h2>Tell me a little<br>about your project.</h2>
+        <p>Share a few details below. Your email app will open with a message addressed to me, ready for you to review and send.</p>
+        <form id="project-enquiry-form" class="project-enquiry-form">
+          <div class="form-field">
+            <label for="enquiry-name">Your name</label>
+            <input id="enquiry-name" name="name" type="text" autocomplete="name" placeholder="e.g. Ada Okafor" required>
+          </div>
+          <div class="form-field">
+            <label for="enquiry-email">Your email</label>
+            <input id="enquiry-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+          </div>
+          <div class="form-field">
+            <label for="enquiry-service">What do you need help with?</label>
+            <select id="enquiry-service" name="service" required>
+              <option value="" selected disabled>Choose a service</option>
+              <option>Website development</option>
+              <option>Web design</option>
+              <option>Graphic design</option>
+              <option>Video editing</option>
+              <option>Something else</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="enquiry-message">A little about your project</label>
+            <textarea id="enquiry-message" name="message" rows="5" placeholder="What are you looking to create?" required></textarea>
+          </div>
+          <button class="btn-az btn-az-primary enquiry-submit" type="submit">Continue to email <i class="bi bi-envelope-arrow-up" aria-hidden="true"></i></button>
+          <p class="form-help">This opens your default email app. Review the message and press Send to deliver it.</p>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
       <div class="contact-details" data-aos="fade-up" data-aos-delay="100">
         <div class="contact-detail"><span class="detail-icon"><i class="bi bi-geo-alt" aria-hidden="true"></i></span><div><small>Based in</small><strong>Nigeria</strong></div></div>
-        <div class="contact-detail"><span class="detail-icon"><i class="bi bi-chat-dots" aria-hidden="true"></i></span><div><small>For enquiries</small><strong><a href="https://x.com/mr_az33" target="_blank" rel="noopener noreferrer">Connect on X <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a></strong></div></div>
-        <div class="contact-note"><i class="bi bi-info-circle" aria-hidden="true"></i><p>This portfolio is a static GitHub Pages site, so there’s no message form here. The X link above opens my existing profile.</p></div>
+        <div class="contact-detail"><span class="detail-icon"><i class="bi bi-envelope" aria-hidden="true"></i></span><div><small>Email me directly</small><strong><a href="mailto:abdulazizusmanaum01@gmail.com">abdulazizusmanaum01@gmail.com</a></strong></div></div>
+        <div class="contact-detail"><span class="detail-icon"><i class="bi bi-chat-dots" aria-hidden="true"></i></span><div><small>Connect on social</small><strong><a href="https://x.com/mr_az33" target="_blank" rel="noopener noreferrer">Message me on X <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a></strong></div></div>
+        <div class="contact-note"><i class="bi bi-info-circle" aria-hidden="true"></i><p>This portfolio is hosted on GitHub Pages. The form creates an email draft in the visitor’s email app; it does not send anything until they choose Send.</p></div>
       </div>
     </div></section>
   </main>
-  <footer class="az-footer"><div class="container footer-main"><a class="brand-link" href="index.html" aria-label="AZ Creation Hub home"><span class="brand-mark" aria-hidden="true">AZ</span><span class="brand-copy"><strong>AZ Creation Hub</strong><small>WEB · DESIGN · VIDEO</small></span></a><p>Thoughtful digital experiences from Nigeria.</p><a class="footer-contact" href="portfolio.html">Explore selected work <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a></div><div class="container footer-bottom"><span>© <span class="current-year">2026</span> Abdulaziz Usman</span><span>Design foundation: <a href="https://bootstrapmade.com/" target="_blank" rel="noopener noreferrer">FolioOne by BootstrapMade</a></span></div></footer>
+  <footer class="az-footer"><div class="container footer-main"><a class="brand-link" href="index.html" aria-label="AZ Portfolio home"><span class="brand-mark" aria-hidden="true">AZ</span><span class="brand-copy"><strong>AZ Portfolio</strong><small>WEB · DESIGN · VIDEO</small></span></a><p>Thoughtful digital experiences from Nigeria.</p><a class="footer-contact" href="portfolio.html">Explore selected work <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a></div><div class="container footer-bottom"><span>© <span class="current-year">2026</span> Abdulaziz Usman</span><span>Design foundation: <a href="https://bootstrapmade.com/" target="_blank" rel="noopener noreferrer">FolioOne by BootstrapMade</a></span></div></footer>
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center" aria-label="Back to top"><i class="bi bi-arrow-up-short" aria-hidden="true"></i></a>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script><script src="assets/vendor/aos/aos.js"></script><script src="assets/js/main.js"></script>
 </body>
