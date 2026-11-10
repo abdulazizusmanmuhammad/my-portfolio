@@ -1,5 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="az-blue" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#1874e8"/>
+      <stop offset="1" stop-color="#77adff"/>
+    </linearGradient>
+  </defs>
   <rect width="64" height="64" rx="15" fill="#101a2b"/>
-  <text x="32" y="43" fill="#fff" font-family="Arial,sans-serif" font-size="27" font-weight="700" letter-spacing="-2" text-anchor="middle">AZ</text>
-  <circle cx="53" cy="14" r="4" fill="#77adff"/>
+  <path d="M12 43 23 19h8l11 24h-8l-2-5H22l-2 5zm13-11h5l-2.5-6z" fill="url(#az-blue)"/>
+  <path d="M37 19h16v6L44 37h9v6H36v-6l9-12h-8z" fill="#fff"/>
+  <circle cx="53" cy="12" r="3" fill="#77adff"/>
 </svg>

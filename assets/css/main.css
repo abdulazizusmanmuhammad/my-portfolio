@@ -2963,6 +2963,13 @@ body.az-site {
   letter-spacing: -0.08em;
 }
 
+.brand-link .brand-mark {
+  display: block;
+  flex: 0 0 auto;
+  background: transparent;
+  object-fit: contain;
+}
+
 .brand-copy {
   display: flex;
   flex-direction: column;
@@ -3721,6 +3728,77 @@ body.az-site {
   font-size: 12px;
 }
 
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.project-slot {
+  overflow: hidden;
+  border: 1px solid #e6ecf3;
+  border-radius: 10px;
+  background: #ffffff;
+}
+
+.project-slot-preview {
+  min-height: 205px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: linear-gradient(145deg, #f3f6fb, #eaf0f8);
+  color: #8795a8;
+}
+
+.project-slot-preview i {
+  color: #1874e8;
+  font-size: 30px;
+}
+
+.project-slot-preview span {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.project-slot-copy {
+  padding: 21px;
+}
+
+.project-slot-category {
+  color: #1874e8;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.project-slot-copy h3 {
+  margin: 9px 0 7px;
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.project-slot-copy p {
+  margin: 0;
+  color: #657386;
+  font-size: 12px;
+  line-height: 1.75;
+}
+
+.project-gallery-help {
+  max-width: 760px;
+  margin: 24px auto 0;
+  color: #657386;
+  font-size: 12px;
+  line-height: 1.8;
+  text-align: center;
+}
+
+.project-gallery-help code {
+  color: #26354a;
+}
+
 .process-list {
   max-width: 900px;
 }
@@ -4057,8 +4135,7 @@ body.az-site {
 }
 
 .footer-brand .brand-mark {
-  background: #ffffff;
-  color: #101a2b;
+  background: transparent;
 }
 
 .footer-brand > p {
@@ -4121,6 +4198,10 @@ body.az-site {
 }
 
 @media (max-width: 767.98px) {
+  .project-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .footer-main {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 30px 24px;
@@ -4592,6 +4673,12 @@ body.mobile-nav-active {
 @media (max-width: 575.98px) {
   .hero-art {
     display: none;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .project-gallery {
+    grid-template-columns: 1fr;
   }
 }
 

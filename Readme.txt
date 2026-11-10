@@ -2,7 +2,12 @@ AZ Portfolio portfolio
 
 This is the static portfolio website for Abdulaziz Usman, a Nigeria-based web developer, web designer, and video editor. The site uses Bootstrap and the FolioOne design foundation and is structured to work on GitHub Pages.
 
-Open index.html to preview the site. The contact page links to Abdulaziz's existing X profile; there is no server-side contact form.
+Open index.html to preview the site. The contact page includes an email-draft form; there is no server-side contact form.
+
+Adding portfolio projects:
+- Save project preview images in assets/img/projects/.
+- In portfolio.html, replace a project placeholder card with the project's image, title, description, tools, and link.
+- The project gallery is a static layout; it does not accept uploads directly from the published page.
 
 Template attribution and license:
 FolioOne by BootstrapMade
