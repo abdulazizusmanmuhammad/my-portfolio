@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#122039"/>
+      <stop offset=".58" stop-color="#332c83"/>
+      <stop offset="1" stop-color="#7359db"/>
+    </linearGradient>
+    <linearGradient id="chart" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#73ccff"/>
+      <stop offset="1" stop-color="#e6f4ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#background)"/>
+  <g fill="#e1edff" opacity=".14">
+    <path d="M0 312 170 128l110 130 153-193 196 175 171-128v338H0z"/>
+  </g>
+  <g stroke="#d7e9ff" stroke-opacity=".24" fill="none">
+    <path d="M45 322h710M68 291h660M90 260h624M112 229h588"/>
+    <path d="M116 191v130M208 166v155M300 181v140M392 130v191M484 166v155M576 151v170M668 116v205"/>
+  </g>
+  <g fill="url(#chart)">
+    <rect x="139" y="249" width="31" height="72" rx="4"/>
+    <rect x="231" y="222" width="31" height="99" rx="4"/>
+    <rect x="323" y="238" width="31" height="83" rx="4"/>
+    <rect x="415" y="179" width="31" height="142" rx="4"/>
+    <rect x="507" y="210" width="31" height="111" rx="4"/>
+    <rect x="599" y="164" width="31" height="157" rx="4"/>
+  </g>
+  <circle cx="676" cy="111" r="44" fill="#9adfff" opacity=".24"/>
+  <path d="M676 75v36l29 18" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round"/>
+  <rect x="60" y="54" width="680" height="342" rx="20" fill="#101a2b" fill-opacity=".26" stroke="#fff" stroke-opacity=".24"/>
+  <text x="400" y="157" fill="#c6e8ff" font-family="Arial,sans-serif" font-size="18" font-weight="700" letter-spacing="7" text-anchor="middle">AZ CREATION</text>
+  <text x="400" y="211" fill="#fff" font-family="Arial,sans-serif" font-size="48" font-weight="800" letter-spacing="2" text-anchor="middle">HUB</text>
+  <rect x="332" y="232" width="136" height="3" rx="1.5" fill="#87d7ff"/>
+  <text x="400" y="271" fill="#e3eaff" font-family="Arial,sans-serif" font-size="16" letter-spacing="4" text-anchor="middle">TURNING IDEAS INTO DIGITAL REALITY</text>
+  <circle cx="400" cy="342" r="26" fill="#fff" fill-opacity=".92"/>
+  <path d="M394 329v26l21-13z" fill="#4339a2"/>
+</svg>
