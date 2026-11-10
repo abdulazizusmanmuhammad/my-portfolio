@@ -1,2 +1,1 @@
-Fully working PHP/AJAX contact form script is available in the pro version of the template.
-You can buy it from: https://bootstrapmade.com/folioone-bootstrap-portfolio-website-template/
+This static portfolio does not use a server-side contact form. Project enquiries are directed to Abdulaziz Usman's existing X profile from contact.html.
