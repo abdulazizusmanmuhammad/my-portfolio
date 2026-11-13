@@ -1,1 +1,1 @@
-This static portfolio does not use a server-side contact form. Project enquiries are directed to Abdulaziz Usman's existing X profile from contact.html.
+This static portfolio does not use a server-side contact form. The contact page creates an email draft in the visitor's default email app. Visitors can also contact Abdulaziz directly through WhatsApp or email.
